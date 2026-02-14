@@ -1336,7 +1336,7 @@ const CNYHeroWidget = () => {
             <span className="text-2xl filter drop-shadow-md">🧧</span>
           </div>
           <p className="text-[#e6cba5] text-[10px] tracking-[0.4em] font-light uppercase border-t border-[#e6cba5]/30 pt-1 mt-1">
-            Gong Xi Fa Cai • 2024
+            Gong Xi Fa Cai • 2026
           </p>
         </div>
 
