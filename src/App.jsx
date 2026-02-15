@@ -339,57 +339,89 @@ const PriceTag = ({ price, small = false }) => (
 
 // 🚨 修正版：高级奢华风格 (Luxury & Premium Typography Banner)
 // 重点：使用 serif 字体、精致的字间距、优雅的渐变色、极细的分割线、慢速悬浮动效
+
 const FreeDrinkBanner = () => (
   <div className="mb-6 mx-0 relative overflow-hidden rounded-xl shadow-[0_4px_20px_-8px_rgba(212,175,55,0.3)] border border-[#f0e6c5] bg-gradient-to-r from-[#fffcf7] to-[#fff9f0]">
-    {/* 极简背景纹理 */}
+
+    {/* 背景纹理 */}
     <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/noise-lines.png')] mix-blend-multiply"></div>
+
     {/* 流光效果 */}
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full animate-shimmer pointer-events-none"></div>
 
     <div className="relative z-10 p-4 flex items-center gap-4">
-      {/* Icon: 精致的圆形容器，带内阴影 */}
-      {/* 🚨 修改点：改为 animate-premium-float，缓慢悬浮 */}
+
+      {/* Icon */}
       <div className="relative shrink-0 animate-premium-float">
         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#f3e6c8] to-[#e6cba5] p-[1px] shadow-sm">
           <div className="w-full h-full rounded-full bg-[#fffbf2] flex items-center justify-center shadow-inner">
             <Gift size={22} className="text-[#b4860b] stroke-[1.5px]" />
           </div>
         </div>
-        {/* Sparkles 也改为缓慢呼吸 */}
-        <Sparkles size={10} className="absolute top-0 right-0 text-[#d4af37] animate-pulse-slow fill-[#d4af37]" />
+
+        <Sparkles
+          size={10}
+          className="absolute top-0 right-0 text-[#d4af37] animate-pulse-slow fill-[#d4af37]"
+        />
       </div>
 
-      {/* 内容区：重新排版，强调字体美感 */}
+      {/* 内容区 */}
       <div className="flex-1 flex flex-col justify-center min-w-0">
         <div className="flex flex-col items-start">
-          {/* 主标题：使用 Serif 字体，增加字间距，高级红金渐变 */}
-          <div className="flex items-center gap-2 mb-1">
-            <h3 className="font-serif font-black italic text-2xl tracking-widest bg-gradient-to-r from-[#9f1239] via-[#be123c] to-[#9f1239] bg-clip-text text-transparent drop-shadow-sm leading-none animate-pulse-slow">
+
+          {/* 主标题：FREE + VALUE 同级 */}
+          {/* 主标题区：高级排版 */}
+          <div className="flex items-center gap-3 mb-1">
+
+            {/* FREE DRINK */}
+            <h3 className="font-serif font-extrabold italic text-xl tracking-[0.18em] bg-gradient-to-r from-[#9f1239] via-[#be123c] to-[#9f1239] bg-clip-text text-transparent drop-shadow-sm leading-none">
               FREE DRINK
             </h3>
+
+            {/* 价值徽章 */}
+            <div className="px-2.5 h-[22px] rounded-md border border-[#d4af37]/40 bg-[#fffdf8]/70 backdrop-blur-sm shadow-[0_0_0_1px_rgba(212,175,55,0.15),0_2px_6px_rgba(212,175,55,0.15)] flex items-center justify-center">
+
+              <span className="font-serif text-[11px] tracking-widest text-[#b8962e] font-semibold leading-none translate-y-[0.5px]">
+                RM 7.90
+              </span>
+
+            </div>
+
+
           </div>
 
-          {/* 装饰性分割线 */}
+
+          {/* 装饰线 */}
           <div className="w-8 h-[1px] bg-[#d4af37]/40 mb-1.5"></div>
 
-          {/* 副标题：中英混排，精细化字体层级 */}
+          {/* 副信息 */}
           <div className="flex flex-col gap-0.5">
             <p className="text-[#5c4d26] text-[11px] font-medium tracking-wide flex items-center gap-1.5">
-              <span className="font-serif italic text-[#8c6b48]">With any Set Meal</span>
+              <span className="font-serif italic text-[#8c6b48]">
+                With any Set Meal
+              </span>
               <span className="w-[1px] h-3 bg-[#d4af37]/40"></span>
-              <span className="font-sans font-bold text-[#5c4d26]">凡购买任何套餐</span>
+              <span className="font-sans font-bold text-[#5c4d26]">
+                凡购买任何套餐
+              </span>
             </p>
+
             <p className="text-[#8c7b50] text-[10px] flex items-center gap-1 opacity-90">
               <span className="text-[#d4af37] text-[8px]">✦</span>
-              <span className="font-serif italic">Includes Daily Special</span>
-              <span className="text-[9px] scale-90">• 附送当日特调</span>
+              <span className="font-serif italic">
+                Jasmine Velvet Cold Brew
+              </span>
+              <span className="text-[9px] scale-90">
+                • 茉莉丝绒冷萃
+              </span>
             </p>
           </div>
+
         </div>
       </div>
     </div>
 
-    {/* 样式注入 */}
+    {/* Animations */}
     <style>{`
       @keyframes shimmer {
         100% { transform: translateX(100%); }
@@ -397,7 +429,7 @@ const FreeDrinkBanner = () => (
       .animate-shimmer {
         animation: shimmer 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
       }
-      /* 🚨 新增：高级悬浮动效 (Premium Float) */
+
       @keyframes premium-float {
         0%, 100% { transform: translateY(0); filter: drop-shadow(0 4px 6px rgba(180, 134, 11, 0.2)); }
         50% { transform: translateY(-4px); filter: drop-shadow(0 8px 12px rgba(180, 134, 11, 0.4)); }
@@ -405,7 +437,7 @@ const FreeDrinkBanner = () => (
       .animate-premium-float {
         animation: premium-float 3s ease-in-out infinite;
       }
-      /* 缓慢呼吸 */
+
       @keyframes pulse-slow {
         0%, 100% { opacity: 1; }
         50% { opacity: 0.85; }
@@ -413,9 +445,18 @@ const FreeDrinkBanner = () => (
       .animate-pulse-slow {
         animation: pulse-slow 3s ease-in-out infinite;
       }
+
+      @keyframes gold-glow {
+        0%,100% { opacity:1 }
+        50% { opacity:0.7 }
+      }
+      .animate-gold-glow{
+        animation: gold-glow 2.8s ease-in-out infinite;
+      }
     `}</style>
   </div>
 );
+
 
 // 🚨 完美修正：高级感交互组件 (Premium Interaction Widget)
 // 点击按钮 -> 按钮消失 -> 详细卡片出现 (无缝切换，不残留按钮)
