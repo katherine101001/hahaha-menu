@@ -72,7 +72,7 @@ const menuData = {
       nameEN: 'Cheesy Maggie Set',
       ingredientsCN: '芝士 • 鸡蛋 • 蟹柳 • 腐皮 • 鱼丸 • 香菜',
       ingredientsEN: 'Cheese • Egg • Coriander',
-      price: 8.90,
+      price: 10.90,
       image: '/assets/maggie.webp',
     },
     {
