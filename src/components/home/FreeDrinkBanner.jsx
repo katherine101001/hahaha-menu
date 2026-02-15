@@ -27,62 +27,62 @@ export default function FreeDrinkBanner() {
                 </div>
 
                 {/* 内容区 */}
-                <div className="flex-1 flex flex-col justify-center min-w-0">
-                    <div className="flex flex-col items-start">
+                {/* 内容区：关键点在于增加 pr-6 给右侧留出绝对空间 */}
+                <div className="flex-1 flex flex-col justify-center min-w-0 pr-6 pl-1">
+                    <div className="flex flex-col items-start w-full">
 
-                        {/* 主标题区 */}
-                        {/* 主标题区：严格对齐版本 */}
-                        <div className="flex items-baseline gap-3 mb-1.5">
+                        {/* 主标题区：使用 flex-nowrap 强制不换行，并控制间距 */}
+                        <div className="flex items-center gap-2 mb-1.5 w-full flex-nowrap">
 
-                            {/* 左侧：FREE DRINK */}
-                            <h3 className="font-serif font-extrabold italic text-xl tracking-[0.05em] bg-gradient-to-r from-[#9f1239] via-[#be123c] to-[#9f1239] bg-clip-text text-transparent drop-shadow-sm leading-none">
+                            {/* 左侧：FREE DRINK - 稍微收缩 tracking 节省空间 */}
+                            <h3 className="font-serif font-extrabold italic text-lg tracking-normal bg-gradient-to-r from-[#9f1239] via-[#be123c] to-[#9f1239] bg-clip-text text-transparent drop-shadow-sm leading-none shrink-0">
                                 FREE DRINK
                             </h3>
 
-                            {/* 右侧：对齐的价值标识 */}
-                            <div className="flex items-center gap-2 self-center">
-                                {/* 分隔装饰线 */}
-                                <div className="w-[1px] h-3 bg-[#d4af37]/30 rotate-[20deg]"></div>
+                            {/* 右侧：价值标识 - 组合为一个不收缩的整体 */}
+                            <div className="flex items-center gap-1.5 shrink-0">
+                                {/* 分隔线 */}
+                                <div className="w-[1px] h-3 bg-[#d4af37]/30 rotate-[20deg] shrink-0"></div>
 
-                                <div className="flex items-center gap-1.5">
-                                    {/* 原价：带删除线，显得整齐 */}
-                                    <span className="font-serif text-[11px] text-[#b4860b]/60 line-through decoration-[#9f1239]/40">
+                                <div className="flex items-center gap-1 whitespace-nowrap">
+                                    {/* RM 7.90 */}
+                                    <span className="font-serif text-[10px] text-[#b4860b]/60 line-through decoration-[#9f1239]/40">
                                         RM 7.90
                                     </span>
 
-                                    {/* 免费标签：紧凑型 */}
-                                    <span className="px-1.5 py-[1px] bg-[#fdf2f2] border border-[#fecaca] rounded text-[9px] font-bold text-[#9f1239] uppercase tracking-wider">
+                                    {/* FREE 标签 */}
+                                    <span className="px-1.5 py-[0.5px] bg-[#fdf2f2] border border-[#fecaca] rounded-[4px] text-[9px] font-bold text-[#9f1239] uppercase tracking-tighter">
                                         FREE
                                     </span>
                                 </div>
                             </div>
                         </div>
+
                         {/* 装饰线 */}
                         <div className="w-8 h-[1px] bg-[#d4af37]/40 mb-1.5"></div>
 
-                        {/* 副信息 */}
-                        <div className="flex flex-col gap-0.5">
-                            <p className="text-[#5c4d26] text-[11px] font-medium tracking-wide flex items-center gap-1.5">
-                                <span className="font-serif italic text-[#8c6b48]">
+                        {/* 副信息：确保在窄屏下也能优雅显示 */}
+                        <div className="flex flex-col gap-1 w-full overflow-hidden">
+                            <p className="text-[#5c4d26] text-[10px] font-medium tracking-tight flex items-center gap-1.5 flex-nowrap">
+                                <span className="font-serif italic text-[#8c6b48] whitespace-nowrap shrink-0">
                                     With any Set Meal
                                 </span>
-                                <span className="w-[1px] h-3 bg-[#d4af37]/40"></span>
-                                <span className="font-sans font-bold text-[#5c4d26]">
+                                <span className="w-[1px] h-2 bg-[#d4af37]/40 shrink-0"></span>
+                                <span className="font-sans font-bold text-[#5c4d26] whitespace-nowrap">
                                     凡购买任何套餐
                                 </span>
                             </p>
 
-                            <p className="text-[#8c7b50] text-[10px] flex items-center gap-1 opacity-90">
-                                <span className="text-[#d4af37] text-[8px]">✦</span>
-                                <span className="font-serif italic">
+                            <p className="text-[#8c7b50] text-[9px] flex items-center gap-1 opacity-90 w-full">
+                                <span className="text-[#d4af37] text-[8px] shrink-0">✦</span>
+                                <span className="font-serif italic truncate">
                                     Jasmine Velvet Cold Brew
                                 </span>
-                                <span className="text-[9px] scale-90">
+                                <span className="scale-90 origin-left whitespace-nowrap shrink-0">
                                     • 茉莉丝绒冷萃
                                 </span>
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
