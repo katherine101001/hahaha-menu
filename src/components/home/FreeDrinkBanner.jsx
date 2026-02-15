@@ -27,12 +27,12 @@ export default function FreeDrinkBanner() {
                 </div>
 
                 {/* 内容区 */}
-                <div className="flex-1 flex flex-col justify-center min-w-0">
+                {/* 内容区 - 增加 pr-4 确保右侧不贴边 */}
+                <div className="flex-1 flex flex-col justify-center min-w-0 pr-4">
                     <div className="flex flex-col items-start">
 
-                        {/* 主标题区 */}
-                        {/* 主标题区：严格对齐且永不换行版本 */}
-                        <div className="flex items-center gap-3 mb-1.5 flex-nowrap">
+                        {/* 主标题区：严格对齐、不换行、且预留间距 */}
+                        <div className="flex items-center gap-3 mb-1.5 w-full flex-nowrap">
 
                             {/* 左侧：FREE DRINK */}
                             <h3 className="font-serif font-extrabold italic text-xl tracking-[0.05em] bg-gradient-to-r from-[#9f1239] via-[#be123c] to-[#9f1239] bg-clip-text text-transparent drop-shadow-sm leading-none shrink-0">
@@ -41,48 +41,47 @@ export default function FreeDrinkBanner() {
 
                             {/* 右侧：价值标识 */}
                             <div className="flex items-center gap-2 shrink-0">
-                                {/* 分隔装饰线 */}
                                 <div className="w-[1px] h-3 bg-[#d4af37]/30 rotate-[20deg]"></div>
 
                                 <div className="flex items-center gap-1.5">
-                                    {/* 原价：添加 whitespace-nowrap 确保 RM 7.90 不会断开 */}
+                                    {/* RM 7.90 永不换行 */}
                                     <span className="font-serif text-[11px] text-[#b4860b]/60 line-through decoration-[#9f1239]/40 whitespace-nowrap">
                                         RM 7.90
                                     </span>
 
-                                    {/* 免费标签 */}
+                                    {/* FREE Tag */}
                                     <span className="px-1.5 py-[1px] bg-[#fdf2f2] border border-[#fecaca] rounded text-[9px] font-bold text-[#9f1239] uppercase tracking-wider whitespace-nowrap">
                                         FREE
                                     </span>
                                 </div>
                             </div>
                         </div>
+
                         {/* 装饰线 */}
                         <div className="w-8 h-[1px] bg-[#d4af37]/40 mb-1.5"></div>
 
                         {/* 副信息 */}
-                        <div className="flex flex-col gap-0.5">
+                        <div className="flex flex-col gap-0.5 w-full">
                             <p className="text-[#5c4d26] text-[11px] font-medium tracking-wide flex items-center gap-1.5">
-                                <span className="font-serif italic text-[#8c6b48]">
+                                <span className="font-serif italic text-[#8c6b48] whitespace-nowrap">
                                     With any Set Meal
                                 </span>
-                                <span className="w-[1px] h-3 bg-[#d4af37]/40"></span>
-                                <span className="font-sans font-bold text-[#5c4d26]">
+                                <span className="w-[1px] h-3 bg-[#d4af37]/40 shrink-0"></span>
+                                <span className="font-sans font-bold text-[#5c4d26] whitespace-nowrap">
                                     凡购买任何套餐
                                 </span>
                             </p>
 
                             <p className="text-[#8c7b50] text-[10px] flex items-center gap-1 opacity-90">
                                 <span className="text-[#d4af37] text-[8px]">✦</span>
-                                <span className="font-serif italic">
+                                <span className="font-serif italic truncate">
                                     Jasmine Velvet Cold Brew
                                 </span>
-                                <span className="text-[9px] scale-90">
+                                <span className="text-[9px] scale-90 shrink-0">
                                     • 茉莉丝绒冷萃
                                 </span>
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
