@@ -31,27 +31,27 @@ export default function FreeDrinkBanner() {
                     <div className="flex flex-col items-start">
 
                         {/* 主标题区 */}
-                        {/* 主标题区：严格对齐版本 */}
-                        <div className="flex items-baseline gap-3 mb-1.5">
+                        {/* 主标题区：严格对齐且永不换行版本 */}
+                        <div className="flex items-center gap-3 mb-1.5 flex-nowrap">
 
                             {/* 左侧：FREE DRINK */}
-                            <h3 className="font-serif font-extrabold italic text-xl tracking-[0.05em] bg-gradient-to-r from-[#9f1239] via-[#be123c] to-[#9f1239] bg-clip-text text-transparent drop-shadow-sm leading-none">
+                            <h3 className="font-serif font-extrabold italic text-xl tracking-[0.05em] bg-gradient-to-r from-[#9f1239] via-[#be123c] to-[#9f1239] bg-clip-text text-transparent drop-shadow-sm leading-none shrink-0">
                                 FREE DRINK
                             </h3>
 
-                            {/* 右侧：对齐的价值标识 */}
-                            <div className="flex items-center gap-2 self-center">
+                            {/* 右侧：价值标识 */}
+                            <div className="flex items-center gap-2 shrink-0">
                                 {/* 分隔装饰线 */}
                                 <div className="w-[1px] h-3 bg-[#d4af37]/30 rotate-[20deg]"></div>
 
                                 <div className="flex items-center gap-1.5">
-                                    {/* 原价：带删除线，显得整齐 */}
-                                    <span className="font-serif text-[11px] text-[#b4860b]/60 line-through decoration-[#9f1239]/40">
+                                    {/* 原价：添加 whitespace-nowrap 确保 RM 7.90 不会断开 */}
+                                    <span className="font-serif text-[11px] text-[#b4860b]/60 line-through decoration-[#9f1239]/40 whitespace-nowrap">
                                         RM 7.90
                                     </span>
 
-                                    {/* 免费标签：紧凑型 */}
-                                    <span className="px-1.5 py-[1px] bg-[#fdf2f2] border border-[#fecaca] rounded text-[9px] font-bold text-[#9f1239] uppercase tracking-wider">
+                                    {/* 免费标签 */}
+                                    <span className="px-1.5 py-[1px] bg-[#fdf2f2] border border-[#fecaca] rounded text-[9px] font-bold text-[#9f1239] uppercase tracking-wider whitespace-nowrap">
                                         FREE
                                     </span>
                                 </div>
