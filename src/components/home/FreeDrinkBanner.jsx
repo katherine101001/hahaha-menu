@@ -27,27 +27,31 @@ export default function FreeDrinkBanner() {
                 </div>
 
                 {/* 内容区 */}
-                {/* 内容区 - 这里的 pr-6 是关键，预留足够的右侧呼吸空间 */}
-                <div className="flex-1 flex flex-col justify-center min-w-0 pl-2 pr-6">
+                {/* 内容区 - 增加右侧 padding 确保整体内容不贴边 */}
+                <div className="flex-1 flex flex-col justify-center min-w-0 pl-2 pr-8">
                     <div className="flex flex-col items-start w-full">
 
-                        {/* 主标题区：使用 justify-between 让价格标签和标题产生自然的间距 */}
-                        <div className="flex items-center justify-between w-full mb-1.5 flex-nowrap gap-4">
+                        {/* 主标题区 - 使用 justify-start 让价格紧跟标题，不往外推 */}
+                        <div className="flex items-center justify-start gap-3 mb-1.5 flex-nowrap">
 
                             {/* 左侧：FREE DRINK */}
                             <h3 className="font-serif font-extrabold italic text-xl tracking-[0.05em] bg-gradient-to-r from-[#9f1239] via-[#be123c] to-[#9f1239] bg-clip-text text-transparent drop-shadow-sm leading-none shrink-0">
                                 FREE DRINK
                             </h3>
 
-                            {/* 右侧：价值标识 - 组合为一个整体 */}
+                            {/* 右侧价值标识：紧随其后，作为一个整体 */}
                             <div className="flex items-center gap-2 shrink-0">
+                                {/* 分隔装饰线 */}
                                 <div className="w-[1px] h-3 bg-[#d4af37]/30 rotate-[20deg]"></div>
 
-                                <div className="flex items-center gap-1.5">
+                                <div className="flex items-center gap-1.5 bg-[#fffdf8]/50 px-1 rounded-sm">
+                                    {/* RM 7.90 */}
                                     <span className="font-serif text-[11px] text-[#b4860b]/60 line-through decoration-[#9f1239]/40 whitespace-nowrap">
                                         RM 7.90
                                     </span>
-                                    <span className="px-1.5 py-[1px] bg-[#fdf2f2] border border-[#fecaca] rounded text-[9px] font-bold text-[#9f1239] uppercase tracking-wider whitespace-nowrap">
+
+                                    {/* FREE Tag - 这里的内缩由父级的 pr-8 保护 */}
+                                    <span className="px-1.5 py-[0.5px] bg-[#fdf2f2] border border-[#fecaca] rounded-[4px] text-[9px] font-bold text-[#9f1239] uppercase tracking-wider whitespace-nowrap">
                                         FREE
                                     </span>
                                 </div>
@@ -57,25 +61,24 @@ export default function FreeDrinkBanner() {
                         {/* 装饰线 */}
                         <div className="w-8 h-[1px] bg-[#d4af37]/40 mb-1.5"></div>
 
-                        {/* 副信息 */}
-                        <div className="flex flex-col gap-0.5 w-full">
-                            {/* 用 items-center 确保文字对齐 */}
-                            <div className="flex items-center gap-1.5">
-                                <span className="text-[#5c4d26] text-[11px] font-serif italic text-[#8c6b48] whitespace-nowrap">
+                        {/* 副信息区 */}
+                        <div className="flex flex-col gap-0.5">
+                            <div className="flex items-center gap-1.5 whitespace-nowrap">
+                                <span className="text-[#8c6b48] text-[11px] font-serif italic">
                                     With any Set Meal
                                 </span>
-                                <span className="w-[1px] h-3 bg-[#d4af37]/40 shrink-0"></span>
-                                <span className="text-[#5c4d26] text-[11px] font-sans font-bold whitespace-nowrap">
+                                <span className="w-[1px] h-3 bg-[#d4af37]/40"></span>
+                                <span className="text-[#5c4d26] text-[11px] font-sans font-bold">
                                     凡购买任何套餐
                                 </span>
                             </div>
 
                             <div className="flex items-center gap-1 opacity-90">
                                 <span className="text-[#d4af37] text-[8px]">✦</span>
-                                <span className="text-[#8c7b50] text-[10px] font-serif italic truncate">
+                                <span className="text-[#8c7b50] text-[10px] font-serif italic">
                                     Jasmine Velvet Cold Brew
                                 </span>
-                                <span className="text-[#8c7b50] text-[9px] scale-90 shrink-0">
+                                <span className="text-[#8c7b50] text-[9px] scale-90">
                                     • 茉莉丝绒冷萃
                                 </span>
                             </div>
