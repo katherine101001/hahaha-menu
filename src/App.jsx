@@ -628,8 +628,8 @@ const PremiumCard = ({ item, onImageClick }) => {
   const isCNY = item.tag && (item.tag.includes('CNY') || item.tag.includes('新春') || item.tag.includes('Ong') || item.tag.includes('Huat'));
 
   // // 智能判断是否为套餐：通过 tag 包含 "Set" 或 "套餐"，或者数据里有 isSet 字段
-  // const isSetMeal = item.isSet || (item.tag && (item.tag.includes('Set') || item.tag.includes('套餐')));
-  const isSetMeal = true;
+  const isSetMeal = item.isSet || (item.tag && (item.tag.includes('Set') || item.tag.includes('套餐')));
+  //const isSetMeal = true;
   // 或者
   //const isSetMeal = item.tag.includes('Special') || item.tag.includes('Must Try') || item.isSet;
 
