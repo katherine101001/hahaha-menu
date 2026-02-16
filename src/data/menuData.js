@@ -13,6 +13,7 @@ const menuData = {
             image: '/assets/ccf-set.webp',
             tag: 'CNY Special / 新春限定',
             badge: 'Huat Ah / 发大财',
+            isSet: true,
             options: ['甜酱 Sweet Sauce', '咖喱 Curry', '酱油 Soy Sauce'],
             upsell: {
                 labelCN: '升级霹雳特色冬菇酱',
@@ -20,16 +21,16 @@ const menuData = {
                 price: 2.00
             }
         },
-        {
-            id: 'h2',
-            nameCN: '娘惹咖喱鸡椰浆饭套餐',
-            nameEN: 'Nyonya Curry Chicken Nasi Lemak',
-            descCN: '香浓椰浆饭配搭慢火熬煮的娘惹咖喱，选用肉质紧实的菜园鸡，佐以花生、水煮蛋与特制叁巴。',
-            descEN: 'Aromatic coconut rice served with signature curry made with Kampung Chicken, peanuts, egg and sambal.',
-            price: 17.88,
-            image: '/assets/nasi-lemak-set.webp',
-            tag: 'Ong Mali / 旺到来',
-        },
+        // {
+        //     id: 'h2',
+        //     nameCN: '娘惹咖喱鸡椰浆饭套餐',
+        //     nameEN: 'Nyonya Curry Chicken Nasi Lemak',
+        //     descCN: '香浓椰浆饭配搭慢火熬煮的娘惹咖喱，选用肉质紧实的菜园鸡，佐以花生、水煮蛋与特制叁巴。',
+        //     descEN: 'Aromatic coconut rice served with signature curry made with Kampung Chicken, peanuts, egg and sambal.',
+        //     price: 17.88,
+        //     image: '/assets/nasi-lemak-set.webp',
+        //     tag: 'Ong Mali / 旺到来',
+        // },
         {
             id: 'h3',
             nameCN: '销魂芝士熔岩Maggie面套餐',
@@ -37,9 +38,10 @@ const menuData = {
             descCN: '浓郁咖喱汤底加入一片灵魂芝士 (Cheese)，融化后的奶香与咖喱完美融合！配搭嫩滑鸡蛋、小料与咖喱鸡。',
             descEN: 'Rich curry broth enriched with a slice of melting cheese! Served with tender poached egg and curry chicken.',
             price: 18.88,
-            image: '/assets/maggie-set.webp',
+            image: '/assets/maggie.webp',
             tag: 'Must Try / 必试邪恶美食',
             badge: 'Cheese Lover',
+            isSet: true,
         }
     ],
     // 主食 (单点)
