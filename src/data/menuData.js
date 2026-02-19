@@ -5,12 +5,12 @@ const menuData = {
     highlights: [
         {
             id: 'h1',
-            nameCN: '南洋至尊猪肠粉大拼盘',
-            nameEN: 'Supreme Chee Cheong Fun Platter',
-            descCN: '一次满足所有愿望！含小香肠、Q弹鱼饼、鱼丸、独家卟卟脆(炸腐皮)、鲜嫩腐皮和蟹柳。',
-            descEN: 'The ultimate platter with sausage, fish cake, fish balls, crispy beancurd skin, fu pei and crab stick.',
-            price: 26.88, // 新春发财价
-            image: '/assets/ccf-set.webp',
+            nameCN: '猪肠粉套餐',
+            nameEN: 'Chee Cheong Fun Set',
+            descCN: '经典传统猪肠粉搭配鱼丸、鱼饼及腐皮。套餐含蛋治面包、红豆汤，并附送一杯饮料。',
+            descEN: 'Traditional Chee Cheong Fun with fish balls, fish cake, and beancurd skin. This set includes a hojiak bread, red bean soup, and a free drink.',
+            price: 17.88, // 新春发财价
+            image: '/assets/ccf.webp',
             tag: 'CNY Special / 新春限定',
             badge: 'Huat Ah / 发大财',
             isSet: true,
